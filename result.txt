@@ -1,0 +1,119 @@
+Device count: 1
+Device0: GeForce GTX 460 SE (1024 MB), CUDA capability: 2.1
+UVA: 1
+canMapHostMemory: 1
+MAX BLOCKS NUMBER: 65535
+tccDriver: 0
+multiProcessorCount: 6
+
+CPU-RAM -> GPU(calculate) -> CPU-RAM
+Selected Device0
+
+DMA - copy by using DMA-controller and launch kernel-function for each packet
+UVA - copy by using Unified Virtual Addressing and launch kernel-function once
+--------------------------------------------------------------------
+
+BLOCKS_NUMBER = 1, THREADS_NUMBER = 16
+each buff_size = 64, elements_number = 81920, array_size = 5 MB
+
+DMA-overlaped:   time: 4.013, 1.24595 MB/sec, 3 x avg-lat: 0.00014696
+DMA-seq:         time: 9.221, 0.542241 MB/sec, avg latency: 0.000112561 (1 X)
+UVA-1B:          time: 0.288, 17.4 MB/sec, avg latency: 3.52e-006 (32 X)
+UVA-MB:          time: 0.377, 13.3 MB/sec, avg latency: 4.6e-006 (24.5 X)
+--------------------------------------------------------------------
+BLOCKS_NUMBER = 1, THREADS_NUMBER = 32
+each buff_size = 128, elements_number = 40960, array_size = 5 MB
+
+DMA-overlaped:   time: 1.97, 2.54 MB/sec, 3 x avg-lat: 0.000144
+DMA-seq:         time: 4.67, 1.07 MB/sec, avg latency: 0.000114 (1 X)
+UVA-1B:          time: 0.145, 34.5 MB/sec, avg latency: 3.54e-006 (32.2 X)
+UVA-MB:          time: 0.19, 26.3 MB/sec, avg latency: 4.64e-006 (24.6 X)
+--------------------------------------------------------------------
+BLOCKS_NUMBER = 1, THREADS_NUMBER = 64
+each buff_size = 256, elements_number = 20480, array_size = 5 MB
+
+DMA-overlaped:   time: 0.98, 5.1 MB/sec, 3 x avg-lat: 0.000144
+DMA-seq:         time: 2.28, 2.19 MB/sec, avg latency: 0.000111 (1 X)
+UVA-1B:          time: 0.073, 68.5 MB/sec, avg latency: 3.56e-006 (31.2 X)
+UVA-MB:          time: 0.096, 52.1 MB/sec, avg latency: 4.69e-006 (23.8 X)
+--------------------------------------------------------------------
+BLOCKS_NUMBER = 1, THREADS_NUMBER = 128
+each buff_size = 512, elements_number = 10240, array_size = 5 MB
+
+DMA-overlaped:   time: 0.497, 10.1 MB/sec, 3 x avg-lat: 0.000146
+DMA-seq:         time: 1.26, 3.96 MB/sec, avg latency: 0.000123 (1 X)
+UVA-1B:          time: 0.038, 132 MB/sec, avg latency: 3.71e-006 (33.2 X)
+UVA-MB:          time: 0.05, 100 MB/sec, avg latency: 4.88e-006 (25.3 X)
+--------------------------------------------------------------------
+BLOCKS_NUMBER = 1, THREADS_NUMBER = 256
+each buff_size = 1024, elements_number = 5120, array_size = 5 MB
+
+DMA-overlaped:   time: 0.233, 21.5 MB/sec, 3 x avg-lat: 0.000137
+DMA-seq:         time: 0.691, 7.24 MB/sec, avg latency: 0.000135 (1 X)
+UVA-1B:          time: 0.02, 250 MB/sec, avg latency: 3.91e-006 (34.5 X)
+UVA-MB:          time: 0.028, 179 MB/sec, avg latency: 5.47e-006 (24.7 X)
+--------------------------------------------------------------------
+BLOCKS_NUMBER = 1, THREADS_NUMBER = 512
+each buff_size = 2048, elements_number = 2560, array_size = 5 MB
+
+DMA-overlaped:   time: 0.125, 40 MB/sec, 3 x avg-lat: 0.000146
+DMA-seq:         time: 0.331, 15.1 MB/sec, avg latency: 0.000129 (1 X)
+UVA-1B:          time: 0.012, 417 MB/sec, avg latency: 4.69e-006 (27.6 X)
+UVA-MB:          time: 0.016, 313 MB/sec, avg latency: 6.25e-006 (20.7 X)
+--------------------------------------------------------------------
+BLOCKS_NUMBER = 1, THREADS_NUMBER = 1024
+each buff_size = 4096, elements_number = 1280, array_size = 5 MB
+
+DMA-overlaped:   time: 0.072, 69.4 MB/sec, 3 x avg-lat: 0.000169
+DMA-seq:         time: 0.151, 33.1 MB/sec, avg latency: 0.000118 (1 X)
+UVA-1B:          time: 0.008, 625 MB/sec, avg latency: 6.25e-006 (18.9 X)
+UVA-MB:          time: 0.009, 556 MB/sec, avg latency: 7.03e-006 (16.8 X)
+--------------------------------------------------------------------
+BLOCKS_NUMBER = 2, THREADS_NUMBER = 1024
+each buff_size = 8192, elements_number = 12800, array_size = 100 MB
+
+DMA-overlaped:   time: 0.784, 128 MB/sec, 3 x avg-lat: 0.000184
+DMA-seq:         time: 1.6, 62.5 MB/sec, avg latency: 0.000125 (1 X)
+UVA-1B:          time: 0.131, 763 MB/sec, avg latency: 1.02e-005 (12.2 X)
+UVA-MB:          time: 0.095, 1.05e+003 MB/sec, avg latency: 7.42e-006 (16.8 X)
+--------------------------------------------------------------------
+BLOCKS_NUMBER = 2, THREADS_NUMBER = 1024
+each buff_size = 16384, elements_number = 6400, array_size = 100 MB
+
+DMA-overlaped:   time: 0.424, 236 MB/sec, 3 x avg-lat: 0.000199
+DMA-seq:         time: 0.776, 129 MB/sec, avg latency: 0.000121 (1 X)
+UVA-1B:          time: 0.115, 870 MB/sec, avg latency: 1.8e-005 (6.75 X)
+UVA-MB:          time: 0.061, 1.64e+003 MB/sec, avg latency: 9.53e-006 (12.7 X)
+--------------------------------------------------------------------
+BLOCKS_NUMBER = 2, THREADS_NUMBER = 1024
+each buff_size = 32768, elements_number = 3200, array_size = 100 MB
+
+DMA-overlaped:   time: 0.254, 394 MB/sec, 3 x avg-lat: 0.000238
+DMA-seq:         time: 0.421, 238 MB/sec, avg latency: 0.000132 (1 X)
+UVA-1B:          time: 0.108, 926 MB/sec, avg latency: 3.38e-005 (3.9 X)
+UVA-MB:          time: 0.046, 2.17e+003 MB/sec, avg latency: 1.44e-005 (9.15 X)
+--------------------------------------------------------------------
+BLOCKS_NUMBER = 2, THREADS_NUMBER = 1024
+each buff_size = 65536, elements_number = 1600, array_size = 100 MB
+
+DMA-overlaped:   time: 0.148, 676 MB/sec, 3 x avg-lat: 0.000278
+DMA-seq:         time: 0.259, 386 MB/sec, avg latency: 0.000162 (1 X)
+UVA-1B:          time: 0.108, 926 MB/sec, avg latency: 6.75e-005 (2.4 X)
+UVA-MB:          time: 0.04, 2.5e+003 MB/sec, avg latency: 2.5e-005 (6.48 X)
+--------------------------------------------------------------------
+BLOCKS_NUMBER = 2, THREADS_NUMBER = 1024
+each buff_size = 131072, elements_number = 800, array_size = 100 MB
+
+DMA-overlaped:   time: 0.115, 870 MB/sec, 3 x avg-lat: 0.000431
+DMA-seq:         time: 0.15, 667 MB/sec, avg latency: 0.000188 (1 X)
+UVA-1B:          time: 0.107, 935 MB/sec, avg latency: 0.000134 (1.4 X)
+UVA-MB:          time: 0.036, 2.78e+003 MB/sec, avg latency: 4.5e-005 (4.17 X)
+--------------------------------------------------------------------
+BLOCKS_NUMBER = 2, THREADS_NUMBER = 1024
+each buff_size = 262144, elements_number = 400, array_size = 100 MB
+
+DMA-overlaped:   time: 0.083, 1.2e+003 MB/sec, 3 x avg-lat: 0.000622
+DMA-seq:         time: 0.105, 952 MB/sec, avg latency: 0.000262 (1 X)
+UVA-1B:          time: 0.081, 1.23e+003 MB/sec, avg latency: 0.000202 (1.3 X)
+UVA-MB:          time: 0.033, 3.03e+003 MB/sec, avg latency: 8.25e-005 (3.18 X)
+--------------------------------------------------------------------
